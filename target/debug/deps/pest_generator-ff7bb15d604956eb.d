@@ -1,0 +1,10 @@
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/pest_generator-ff7bb15d604956eb.rmeta: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/macros.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/docs.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/generator.rs
+
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/libpest_generator-ff7bb15d604956eb.rlib: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/macros.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/docs.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/generator.rs
+
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/pest_generator-ff7bb15d604956eb.d: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/macros.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/docs.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/generator.rs
+
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/lib.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/macros.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/docs.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.2/src/generator.rs:

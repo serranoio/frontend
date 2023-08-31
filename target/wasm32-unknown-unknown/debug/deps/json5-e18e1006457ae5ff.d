@@ -1,0 +1,11 @@
+/Users/davidserrano/greatness/rust/fin-mate/target/wasm32-unknown-unknown/debug/deps/json5-e18e1006457ae5ff.rmeta: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/de.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/error.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/ser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/json5.pest
+
+/Users/davidserrano/greatness/rust/fin-mate/target/wasm32-unknown-unknown/debug/deps/libjson5-e18e1006457ae5ff.rlib: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/de.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/error.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/ser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/json5.pest
+
+/Users/davidserrano/greatness/rust/fin-mate/target/wasm32-unknown-unknown/debug/deps/json5-e18e1006457ae5ff.d: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/de.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/error.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/ser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/json5.pest
+
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/lib.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/de.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/error.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/ser.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/json5-0.4.1/src/json5.pest:

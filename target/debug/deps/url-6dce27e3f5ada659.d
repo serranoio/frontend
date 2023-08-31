@@ -1,0 +1,11 @@
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/url-6dce27e3f5ada659.rmeta: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/host.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/origin.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/parser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/path_segments.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/slicing.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/quirks.rs
+
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/url-6dce27e3f5ada659.d: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/host.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/origin.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/parser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/path_segments.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/slicing.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/quirks.rs
+
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/lib.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/host.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/origin.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/parser.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/path_segments.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/slicing.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/url-2.4.1/src/quirks.rs:

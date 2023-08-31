@@ -1,0 +1,11 @@
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/yaml_rust-6ad42e5f79031698.rmeta: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/emitter.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/parser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/scanner.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/yaml.rs
+
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/libyaml_rust-6ad42e5f79031698.rlib: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/emitter.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/parser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/scanner.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/yaml.rs
+
+/Users/davidserrano/greatness/rust/fin-mate/target/debug/deps/yaml_rust-6ad42e5f79031698.d: /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/lib.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/emitter.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/parser.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/scanner.rs /Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/yaml.rs
+
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/lib.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/emitter.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/parser.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/scanner.rs:
+/Users/davidserrano/.cargo/registry/src/index.crates.io-6f17d22bba15001f/yaml-rust-0.4.5/src/yaml.rs:
