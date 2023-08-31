@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accential</title>
+    <link rel='stylesheet' href="./style/main.css">
+    <link data-trunk rel="inline" type="svg" href="./public/assets/globe.svg"/>
+</head>
+<body>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            background-color: var(--primary-4);
+    background: linear-gradient(to top,var(--primary-3), var(--secondary-3));
+      position: relative;
+      overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family:  Helvetica, sans-serif;
+    font-weight: 400;
+}
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        :root {
+            --primary: #F94C10;
+            --between: #E02624;
+            --secondary: #C70039;
+
+--primary-0:  #F94C10;	/* Main Primary color */
+--primary-1:  #FFD6C9;
+--primary-1-shade-1:  #e6c1b5;
+--primary-1-shade-2:  #ccaba1;
+--primary-2:  #F3845E;
+--primary-3:  #CE3500;
+--primary-4:  #A72B00;
+
+--secondary-0:  #F97E10;	/* Main Secondary color (1) */
+--secondary-1:  #FFE2C9;
+--secondary-2:  #F3A45E;
+--secondary-3:  #CE6100;
+--secondary-4:  #A74E00;
+
+--tertiary-0:  #ED0F2E;	/* Main Secondary color (2) */
+--tertiary-1:  #F3BFC6;
+--tertiary-2:  #E75A6D;
+--tertiary-3:  #C4001B;
+--tertiary-4:  #9F0016;
+
+
+        }
+
+        .nav:not(.hero)::after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            background-color: var(--tertiary-1);
+            position: absolute;
+            transform: translate(-50%, 100%) scaleX(0);
+            bottom: 0;
+            left: 50%;
+            transition: all .2s;
+            transform-origin: left;
+
+        }
+
+        .nav:not(.hero):hover::after {
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            transform: translate(-50%, 100%) scaleX(1);
+            bottom: 0;
+            left: 50%;
+        }
+
+        .hero {
+            color: var(--primary-1) !important;
+            transition: all .2s;
+            box-shadow: 0 0 0 1px var(--primary-1);   
+        }
+        
+        .hero span {
+            opacity: 0;
+            transition: all .2s;
+            position: absolute;
+            font-weight: 400;
+            transform: translateX(-5px);
+        }
+        
+        .hero:hover span {
+            opacity: 1;
+            
+            transform: translateX(5px);
+        }
+
+
+
+        svg {
+            position: absolute;
+            right: -6%;
+            top: -14%;
+            transform: translate(25%, 5%);
+        }
+
+        svg g {
+            color: #9F0016;
+            width: 200px;
+            height: 200px;
+            
+        }
+        svg path {
+            /* color: #9F0016; */
+            /* stroke: linear-gradient(var(--primary-0), var(--primary)); */
+            stroke: transparent;
+            fill: transparent;  
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-stroke: 8px transparent; */
+            
+        }
+        svg polyline {
+            fill: transparent;
+            stroke: var(--secondary-1);
+            stroke-width: 2;
+            stroke-opacity: .25;
+            stroke-dasharray: .25 3;
+            stroke-linecap: round;
+
+            /* fill:hsl(from color h s l); */
+            /* fill: linear-gradient(var(--primary-0), var(--primary-1)); */
+        }
+        
+        .hero:hover {
+            /* border: none !important; */
+            box-shadow: 0 0 0 var(--primary-1);   
+        }
+
+        .hero-title {
+            /* text-shadow: 0 0 4px rgba(0,0,0,.25); */
+
+        }
+
+
+        .seconds {
+            text-shadow: 0 0 4px rgba(0,0,0,.5);
+            transition: all .2s;
+        }
+        
+        .seconds:hover {
+            text-shadow: 0 0 4px rgba(0,0,0,.75);
+        }
+
+    
+        .arrow-down::after {
+            content: ">";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -10px) rotate(90deg);
+            animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 2s infinite;
+	-o-animation: bounce 2s infinite;
+    cursor: pointer;
+        }
+        
+        @keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0) rotate(90deg);}
+	40% {transform: translate(-50%, -20px) rotate(90deg);}
+	60% {transform: translate(-50%, -10px) rotate(90deg);}
+}
+
+
+.file-submit {
+    color: white;
+    background-color: black;
+}
+
+.file-submit button {
+    color: white;    
+}
+
+
+
+.file-dispatcher {
+    background-color: #CE3500;
+    opacity: 0.5;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,.25);
+    width: 500px;
+    height: 100px;
+    position: relative;
+}
+
+
+
+        
+.send-form {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    background-color: transparent;
+    border: none;
+    color: var(--primary-1);
+    font-size: 3.6rem;
+    cursor: pointer;
+    transition: all .2s;
+    display: none;
+} 
+.send-form:hover {
+    transform: translate(-25%, 0%);
+
+}
+
+.send-form {
+  --bg-size: 400%;
+  --color-one: #F3845E;
+  --color-two: #CE3500; 
+  font-size: clamp(3rem, 25vmin, 8rem);
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 8s infinite linear;
+}
+
+
+
+
+.show {
+    display: block;
+}
+
+
+
+
+
+@keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+}
+
+    </style>
+</body>
+</html>
