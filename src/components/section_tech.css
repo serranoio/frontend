@@ -1,0 +1,46 @@
+.selected, .tab:hover {
+    color: var(--secondary-1) !important;
+    /* box-shadow: 0 -1.5px 8px .01px var(--secondary-1) !important; */
+    box-shadow: 0 -1.5px 4px 0px var(--secondary-1) !important;
+}
+
+.tab {
+    transition: all .2s;
+    background-color: transparent;
+    font-size: 3.2rem;
+    color: var(--primary-2);
+    padding: 2.4rem 2.4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: radial-gradient(ellipse 200% 200% at 50% 50%,rgba(205, 53, 0, .35), rgba(0,0,0,1) 33.5%);
+    box-shadow: 0 -1.5px 4px 0px var(--secondary-2);
+}
+
+.white-golang {
+    position: absolute;
+    width: 69px;
+    height: 36px;
+    background-color: white;
+    bottom: 41%;
+    left: 45.5%;
+    z-index: 0;
+}
+
+.white-rust {
+    position: absolute;
+    width: 69px;
+    height: 36px;
+    background-color: white;
+    bottom: 34%;
+    left: 17%;
+    z-index: 0;
+}
+
+.center {
+    position: relative;
+}
+
+.img {
+    z-index: 1;
+}

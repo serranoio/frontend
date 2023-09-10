@@ -12,6 +12,7 @@ pub fn Logo(cx: Scope) -> impl IntoView {
         transform: rotate(45deg) translateY(-50px);
         transform-origin: center;
         z-index: 0;
+        border-radius: 20px;
         ";
         
         let logoLine = "

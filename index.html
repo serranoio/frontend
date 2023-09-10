@@ -6,19 +6,29 @@
     <title>Accential</title>
     <link rel='stylesheet' href="./style/main.css">
     <link data-trunk rel="inline" type="svg" href="./public/assets/globe.svg"/>
+    <link data-trunk rel="copy-dir" href="./public">
+    
+    <link  data-trunk rel='css' href="/src/components/section_tech.css">
+    <link  data-trunk rel='css' href="/src/components/section_about.css">
 </head>
 <body>
     <style>
         html {
             font-size: 62.5%;
+          
+  scroll-behavior: smooth;
+
         }
         body {
-            background-color: var(--primary-4);
-    background: linear-gradient(to top,var(--primary-3), var(--secondary-3));
+            background-color: var(--secondary-3);
+    /* background: linear-gradient(to top,var(--primary-3), var(--secondary-3)); */
       position: relative;
       overflow-x: hidden;
 }
 
+.head {
+    overflow: hidden;
+}
 h1,h2,h3,h4,h5,h6 {
     font-family:  Helvetica, sans-serif;
     font-weight: 400;
@@ -35,36 +45,33 @@ h1,h2,h3,h4,h5,h6 {
             --between: #E02624;
             --secondary: #C70039;
 
---primary-0:  #F94C10;	/* Main Primary color */
---primary-1:  #FFD6C9;
+            --primary-0:  #F94C10;	/* Main Primary color */
+            --primary-1:  #FFD6C9;
 
 
---primary-1-shade-1:  #e6c1b5;
---primary-1-shade-2:  #ccaba1;
---primary-2:  #F3845E;
---primary-3:  #CE3500;
---primary-4:  #A72B00;
+            --primary-1-shade-1:  #e6c1b5;
+            --primary-1-shade-2:  #ccaba1;
+            --primary-2:  #F3845E;
+            --primary-3:  #CE3500;
+            --primary-4:  #A72B00;
 
---secondary-0:  #F97E10;	/* Main Secondary color (1) */
---secondary-1:  #FFE2C9;
---secondary-2:  #F3A45E;
---secondary-3:  #CE6100;
---secondary-4:  #A74E00;
+            --secondary-0:  #F97E10;	/* Main Secondary color (1) */
+            --secondary-1:  #FFE2C9;
+            --secondary-2:  #F3A45E;
+            --secondary-3:  #CE6100;
+            --secondary-4:  #A74E00;
 
---tertiary-0:  #ED0F2E;	/* Main Secondary color (2) */
---tertiary-1:  #F3BFC6;
---tertiary-2:  #E75A6D;
---tertiary-3:  #C4001B;
---tertiary-4:  #9F0016;
+
+            --black: #000;
 
 
         }
 
-        .nav:not(.hero)::after {
+        .nav::after {
             content: "";
-            height: 2px;
+            height: 1px;
             width: 100%;
-            background-color: var(--tertiary-1);
+            background-color: var(--primary-1);
             position: absolute;
             transform: translate(-50%, 100%) scaleX(0);
             bottom: 0;
@@ -74,7 +81,7 @@ h1,h2,h3,h4,h5,h6 {
 
         }
 
-        .nav:not(.hero):hover::after {
+        .nav:hover::after {
             content: "";
             height: 2px;
             width: 100%;
@@ -87,10 +94,17 @@ h1,h2,h3,h4,h5,h6 {
         .hero {
             color: var(--primary-1) !important;
             transition: all .2s;
-            box-shadow: 0 0 0 1px var(--primary-1);   
+            /* box-shadow: 0 0 0 1px var(--primary-1);    */
+            background: #CE6100;
+          
+            background: linear-gradient(145deg, #F57300, #A74F00);
+            border-radius: 100%;
+            box-shadow: 12.31px 12.31px 62px #803C00, -12.31px -12.31px 62px #FF8600;
+            
         }
         
-        .hero span {
+        .hero::after {
+            content: ">>";
             opacity: 0;
             transition: all .2s;
             position: absolute;
@@ -98,28 +112,29 @@ h1,h2,h3,h4,h5,h6 {
             transform: translateX(-5px);
         }
         
-        .hero:hover span {
+        .hero:hover::after {
             opacity: 1;
             
             transform: translateX(5px);
         }
 
-
-
         svg {
             position: absolute;
-            right: -6%;
-            top: -14%;
-            transform: translate(25%, 5%);
+            right: -35%;
+            top: -7%;
+            /* transform: translate(25%, 5%); */
+            width: 1750px;
+            height: 1750px;
         }
 
         svg g {
             color: #9F0016;
-            width: 200px;
-            height: 200px;
             
         }
+
         svg path {
+
+            
             /* color: #9F0016; */
             /* stroke: linear-gradient(var(--primary-0), var(--primary)); */
             stroke: transparent;
@@ -127,18 +142,33 @@ h1,h2,h3,h4,h5,h6 {
             /* -webkit-background-clip: text; */
             /* -webkit-text-stroke: 8px transparent; */
             
+            /* width: 400px; */
+            /* height: 100%; */
+            
         }
         svg polyline {
             fill: transparent;
+            stroke: linear-gradient(var(--secondary-1), #000);
             stroke: var(--secondary-1);
             stroke-width: 2;
             stroke-opacity: .25;
             stroke-dasharray: .25 3;
             stroke-linecap: round;
-
+            animation: svg  2s infinite alternate;
             /* fill:hsl(from color h s l); */
             /* fill: linear-gradient(var(--primary-0), var(--primary-1)); */
         }
+
+
+@keyframes svg {
+    from {
+        stroke-opacity: .5;
+    }
+    to {
+        stroke-opacity: .25;
+    }
+}
+
         
         .hero:hover {
             /* border: none !important; */

@@ -17,7 +17,8 @@ leptos_meta = { version = "0.4", features = ["nightly"] }
 leptos_actix = { version = "0.4", optional = true }
 leptos_router = { version = "0.4", features = ["nightly"] }
 wasm-bindgen = "=0.2.87"
-
+gloo-timers = { version = "0.2", features = ["futures"] }
+leptos_image = "0.1.5"
 
 [features]
 csr = ["leptos/csr", "leptos_meta/csr", "leptos_router/csr"]
@@ -29,6 +30,7 @@ ssr = [
   "leptos/ssr",
   "leptos_meta/ssr",
   "leptos_router/ssr",
+   "leptos_image/ssr",
 ]
 
 # Defines a size-optimized profile for the WASM bundle in release mode
