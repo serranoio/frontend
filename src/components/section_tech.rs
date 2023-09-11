@@ -1,6 +1,5 @@
 use leptos::{*, ev::{Event, MouseEvent}};
-use tracing::event;
-use leptos::event_target;
+
 // leptos::log!("where do I run?");
 
 // what we need to do next is to create an interval that ends after 100 seconds.
@@ -48,7 +47,9 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         we would have to switch over to TypeScript.
         Good thing I am a solo developer ;). (I'm keeping it in Rust + Leptos). It is a lot harder to create a progressive
          web app using Rust, but that's why for one of my solo projects, I wish to create my own frontend Rust framework.
-         https://github.com/serranoio/pinnacle
+         https://github.com/serranoio/pinnacle.
+
+         The frontend is completely static - so I'm hosting it on Netlify.
        ".to_string());
 
        let backend = TechStack::Backend(
@@ -60,7 +61,10 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         individual microservices. The benefit of RabbitMQ is that I am going to create pipelined concurrency. Instead
         of having the entire document parsed, then tokenized, etc., as soon as parts of the document is parsed, it will be
         sent to the tokenizer. As soon as some parts are tokenized, it will be sent to the converter, etc. This will create
-        a blazingly fast architecture.
+        a blazingly fast architecture. I will be hosting the backend on fly.io in a Docker container.
+
+        We will use a small sqlite3 file for the database.
+        We will use unidoc for PDF parsing (github.com/unidoc/unipdf).
         ".to_string()
        );
 
@@ -68,7 +72,7 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         "In the final step, we will generate an html-report from the gathered data. To do so,
          we will use Lit Element for reactivity,
         (a lightweight framework using web components)
-        and then hydrate an html document with the TypeScript."
+        and then hydrate an HTML document with TypeScript. We will use Bun to do everything ;)."
         .to_string());
 
         let tabs = vec![frontend.clone(), backend.clone(), document.clone()];
@@ -133,6 +137,8 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
     id="tech"
     >
         <div style={container}>
+        <h3 style={title.to_string() + " font-size: 6.4rem;"}>"MVP"</h3>
+        <p style={tabP}>"We aim to be able to create at least ONE metric from the financial statement that is evaluated and viewable from an interactive HTML document"</p>
             <h2 style={title}>"The Tech Stack"</h2>
             <div
             style={tabSection}
@@ -191,6 +197,14 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
                 quality=85
                 class="img"
                 />
+                <img
+                src="../../public/images/bun.png"
+                width=100
+                height=100
+                quality=85
+                class="bun"
+                />
+
             </div>
         </div>
     </section>

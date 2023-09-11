@@ -1,1 +1,0 @@
-/Users/davidserrano/greatness/rust/fin-mate/target/debug/leptos_start: /Users/davidserrano/greatness/rust/fin-mate/src/app.rs /Users/davidserrano/greatness/rust/fin-mate/src/lib.rs /Users/davidserrano/greatness/rust/fin-mate/src/main.rs

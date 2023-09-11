@@ -24,11 +24,11 @@
 
     
     
-    <link rel="stylesheet" href="/section_tech-853de2846443ec59.css">
-    <link rel="stylesheet" href="/section_about-7e78ef916ef35e31.css">
+    <link rel="stylesheet" href="/section_tech-5b0c0f074fa79e23.css">
+    <link rel="stylesheet" href="/section_about-ffdb958fc0887ec0.css">
 
-<link rel="preload" href="/leptos_start-d5bea43f8e47c210_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/leptos_start-d5bea43f8e47c210.js"></head>
+<link rel="preload" href="/leptos_start-fa9a1c2671c32367_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/leptos_start-fa9a1c2671c32367.js"></head>
 <body>
     <style>
         html {
@@ -305,31 +305,4 @@ h1,h2,h3,h4,h5,h6 {
 
     </style>
 
-<script type="module">import init from '/leptos_start-d5bea43f8e47c210.js';init('/leptos_start-d5bea43f8e47c210_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+<script type="module">import init from '/leptos_start-fa9a1c2671c32367.js';init('/leptos_start-fa9a1c2671c32367_bg.wasm');</script></body></html>

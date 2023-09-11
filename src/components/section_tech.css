@@ -45,6 +45,15 @@
     z-index: 0;
 }
 
+.bun {
+    position: absolute;
+    right: 24%;
+    top: 60%;
+}
+
+
+/* SECTION DO */
+
 .visual-box {
     position: relative;
 }
