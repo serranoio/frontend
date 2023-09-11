@@ -43,13 +43,16 @@ let demo = "
     bottom: 10%;
     color: var(--primary-1);
     font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 999;
 ";
 
     view! { cx,
         <section style={sectionStyles.to_string() + baseSectionStyles}>
-            <div style={demo} class="arrow-down">
-                <div>"Try Online Demo!"</div>
-            </div>
+            <a href="#demo" style={demo} class="arrow-down">
+                <p>"Try Online Demo!"</p>
+            </a>
         <div style={flex}>
         <h1 style={heroTitleStyles} class="hero-title">
         "Convert your Financials to an Accounting Statement in"

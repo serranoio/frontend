@@ -50,8 +50,9 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
 
   let title = "
   font-size: 8rem;
-  transform: translateY(-30rem);
+  // transform: translateY(-30rem);
   color: var(--secondary-1);
+  text-align: center;
   ";
 
   let (processing_status, set_processing_status) = create_signal(cx, "");
@@ -125,51 +126,54 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
     height: 100vh;
     margin: 0 auto;
     ">
-    <form on:submit=on_submit style="display: flex; align-items: center; flex-direction: column;">
-    <h1 style={title}>"And the Fiesta Begins."</h1>
-    <div style="position: relative; display: flex; align-items: center;">
     <div>
-    <label style={fileLabel} for="upload">"Upload file here"</label>
-    <input type="file"
-    on:change=on_change
-    style={inputStyles}
-    id="upload"
-                  accept=".pdf" 
-                  class="file-submit"
-                  node_ref=input_element
-                  />
-                  </div>
+    <h1 style={title}>"And the Fiesta Begins."</h1>
+    <h2 style="color: var(--primary-1); font-size: 6.4rem; text-align: center;">"DEMO SECTION IN WIP"</h2>
+    </div>
+    // <form on:submit=on_submit style="display: flex; align-items: center; flex-direction: column;">
+    // <div style="position: relative; display: flex; align-items: center;">
+    // <div>
+    // <label style={fileLabel} for="upload">"Upload file here"</label>
+    // <input type="file"
+    // on:change=on_change
+    // style={inputStyles}
+    // id="upload"
+    //               accept=".pdf" 
+    //               class="file-submit"
+    //               node_ref=input_element
+    //               />
+    //               </div>
 
-                  <div class="file-dispatcher">
-                    <div class="file"
-                    style={"
-                    position: absolute;
-                    background-color: white;
-                    width: 20%;
-                    height: 100%;
-                    transition: all .2s;
+    //               <div class="file-dispatcher">
+    //                 <div class="file"
+    //                 style={"
+    //                 position: absolute;
+    //                 background-color: white;
+    //                 width: 20%;
+    //                 height: 100%;
+    //                 transition: all .2s;
                     
-                    "}
-                    style:left=move|| format!("{}%", count())
+    //                 "}
+    //                 style:left=move|| format!("{}%", count())
                     
-                    >
+    //                 >
 
-                    </div>
+    //                 </div>
 
-                    <button type="submit"
-                    style={submitStyles}
-                    class:show=move || file_added() && !file_send()
-                    class="send-form"
-                    >
-                    ">>"
-                    </button>
-                    <p style={parseStatusStyles}>{display}</p>
-                  </div>
+    //                 <button type="submit"
+    //                 style={submitStyles}
+    //                 class:show=move || file_added() && !file_send()
+    //                 class="send-form"
+    //                 >
+    //                 ">>"
+    //                 </button>
+    //                 <p style={parseStatusStyles}>{display}</p>
+    //               </div>
 
-                  <p style={readied}>"end"</p>
-            </div>
-          </form>
-        </div>
+    //               <p style={readied}>"end"</p>
+    //         </div>
+    //       </form>
+    </div>
         </section>
     }
 }

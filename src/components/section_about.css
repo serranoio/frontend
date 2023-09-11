@@ -9,12 +9,19 @@
 .card {
 
     background: radial-gradient(ellipse 200% 200% at 50% 50%,rgba(205, 53, 0, .35), rgba(0,0,0,1) 33.5%);
-    box-shadow: 0 -1.5px 4px 0px var(--secondary-2);
-
+    box-shadow:  0 4px 1px 1px var(--secondary-2);
+    
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
     border-radius: 10px;
+    transition: all .5s;
+    border-top: .5px solid var(--secondary-2);
+}
+
+.card:hover {
+    box-shadow: 0 4px 1px 1px var(--secondary-2), 0 8px 1px 1px var(--secondary-3);
+
+    transform: translateY(-4px);
 }
 
 
@@ -45,3 +52,9 @@
 
 
 
+
+
+.image-div {
+    display: flex;
+    justify-content: center;
+}

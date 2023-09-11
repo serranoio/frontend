@@ -29,33 +29,37 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
 
     let grid = "
         display: grid;
-        grid-template-columns: .5fr 1fr;
+        grid-template-columns: 1fr .5fr;
         align-items: center;
         justify-content: center;
         align-content: center;
         justify-content: center;
         height: 100%;
         column-gap: 2.4rem;
-        row-gap: 2.4rem;
+        row-gap: 6.4rem;
         ";
 
     let textBox = "
-        border-right: 2px solid var(--tertiary-4);
         font-size: 4.4rem;
         color: var(--secondary-1);
 
         width: 100%;
         height: 100%;
         padding: 6.4rem 0;
+        display: flex;
+        align-items: center;
         ";
 
         let visualBox = "
+        border-left: 2px dashed var(--secondary-3);
         // background-color: ;
-        box-shadow: 0 0 2px 3px rgba(206, 53, 0, 0.3);
-        border-radius: 10px;
+        // box-shadow: 0 0 2px 3px rgba(206, 53, 0, 0.3);
+        // border-radius: 10px;
         width: 100%;
         height: 100%;
-        padding: 0 0 0 2.4rem;
+        padding: 0 0 0 3.2rem;
+        display: flex;
+        justify-content: center;
     ";
 
     let highlight = "
@@ -71,7 +75,7 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
     id="do"
     >
     <div style={container}>
-    <h2 style={title}>"What we do"</h2>
+    <h2 style={title}>"What We Do"</h2>
 
     <div style={grid}
     >
@@ -80,16 +84,22 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
         <p>"Distill your financial Statement ino the" <span style={highlight}>" highlights "</span>"for your stakeholders"</p>
     </div>
 
-    <div style={visualBox}>
-    <p></p>
+    <div class="visual-box" style={visualBox}>
+    <img
+        class="img"
+        src="../../public/assets/predict.svg"
+    />
     </div>
     
     <div style={textBox}>
     <p>"View the highlights in an" <span style={highlight}>" interactive "</span> "document!"</p>
     </div>
     
-    <div style={visualBox}>
-    <p>"i"</p>
+    <div class="visual-box" style={visualBox}>
+    <img
+        class="img"
+        src="../../public/assets/instant.svg"
+    />
     </div>
     </div>
     </div>

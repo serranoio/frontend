@@ -42,5 +42,22 @@
 }
 
 .img {
-    z-index: 1;
+    z-index: 0;
+}
+
+.visual-box {
+    position: relative;
+}
+
+.visual-box::after {
+    content: "";
+    border-radius: 50%;
+    border: 2px double var(--secondary-3);
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -46,7 +46,9 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         out on top to be the gold standard of websites. Rust is able to target WASM with extremely small binaries,
         allowing for fast performance. Unfortunately, the ecosystem is young. If we were to take this public,
         we would have to switch over to TypeScript.
-        Good thing I am a solo developer ;). (I'm keeping it in Rust + Leptos) 
+        Good thing I am a solo developer ;). (I'm keeping it in Rust + Leptos). It is a lot harder to create a progressive
+         web app using Rust, but that's why for one of my solo projects, I wish to create my own frontend Rust framework.
+         https://github.com/serranoio/pinnacle
        ".to_string());
 
        let backend = TechStack::Backend(
@@ -104,6 +106,7 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         text-align: center;
         line-height: 1.5;
         height: 10rem;
+        z-index: 90;
     ";
 
     let tabSection = "
@@ -180,8 +183,9 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
             <div class="white-golang"></div>
             <div class="white-rust"></div>
                 <img
-                src="../../public/tech-stack.png"
+                src="../../public/images/tech-stack.png"
                 blur=true
+
                 width=1100
                 height=700
                 quality=85
