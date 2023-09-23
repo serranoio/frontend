@@ -30,6 +30,16 @@ impl TechStack {
             Self::Backend(_) => "Backend".to_string(),
         }
     }
+
+    fn get_img(&self) -> String {
+        match self {
+            Self::Frontend(_) => "../../public/images/frontend.png".to_string(),
+            Self::Document(_) => "../../public/images/document.png".to_string(),
+            Self::Backend(_) => "../../public/images/backend.png".to_string(),
+        }
+    }
+
+
 }
 
 #[component]
@@ -42,37 +52,39 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
         which is then shipped to the browser. Although WASM is fast,
          it is still not as fast as SolidJS or vanillaJS. It's a baby.
         Why Rust? Because in the wake of the frontend framework war, I believe that WASM will rise 
-        out on top to be the gold standard of websites. Rust is able to target WASM with extremely small binaries,
-        allowing for fast performance. Unfortunately, the ecosystem is young. If we were to take this public,
-        we would have to switch over to TypeScript.
-        Good thing I am a solo developer ;). (I'm keeping it in Rust + Leptos). It is a lot harder to create a progressive
-         web app using Rust, but that's why for one of my solo projects, I wish to create my own frontend Rust framework.
-         https://github.com/serranoio/pinnacle.
-
+        out on top to be the gold standard of websites (In like 5-10 years). Rust is able to target WASM with extremely small binaries,
+        allowing for fast performance. Unfortunately, the ecosystem is young, so it is hard to create progressive web apps. So when I do
+        get to adding indexxedDB and web workers (if I find a use case for web workers),
+        I think I will have to add them in the JavaScript file that injects the WASM.
          The frontend is completely static - so I'm hosting it on Netlify.
        ".to_string());
 
        let backend = TechStack::Backend(
-        "There was no way that I could make my backend in Rust haha. 
-        Also, RabbitMQ does not provide official SDK's in Rust.
-        The language of choice is Golang, which is currently dominating the microservice industry
-        as well as the cloud. All of the appropriate tooling is built in Golang, so I might as well make this
-        in Golang. We use RabbitMQ to distribute the task of parsing, tokenizing, converting, and building into
-        individual microservices. The benefit of RabbitMQ is that I am going to create pipelined concurrency. Instead
-        of having the entire document parsed, then tokenized, etc., as soon as parts of the document is parsed, it will be
-        sent to the tokenizer. As soon as some parts are tokenized, it will be sent to the converter, etc. This will create
-        a blazingly fast architecture. I will be hosting the backend on fly.io in a Docker container.
+        "There was no way that we could make the backend in Rust haha. 
+        The language of choice is Golang, which is currently dominating the backend industry
+        as well as the cloud. All of the appropriate tooling is built in Golang, so we might as well make this
+        in Golang.
 
-        We will use a small sqlite3 file for the database.
-        We will use unidoc for PDF parsing (github.com/unidoc/unipdf).
+        We will be creating a distributed monolith, where each part of the backend is heavily modularized.
+        An HTML doc sent to the backend will go to the Tabulizer, where every table is parsed in the HTML document. Next,
+        the tables will go to the 'financizer' (we made that word up), where we will create metrics from the tabular data.
+        This financial data will then go to the html report module and be converted into a fully functional html report. 
+        (More about it in the document section) This reactive html document is then sent back as the response on api/document.
+  
+        The backend api service will use Gin to create the api endpoints.
+
+        We will use pocketbase, hosted on the backend. We will perhaps save metrics, or we will save the already parsed files.
+
+        We will be hosting the backend on fly.io.
         ".to_string()
        );
 
        let document = TechStack::Document(
         "In the final step, we will generate an html-report from the gathered data. To do so,
-         we will use Lit Element for reactivity,
-        (a lightweight framework using web components)
-        and then hydrate an HTML document with TypeScript. We will use Bun to do everything ;)."
+        we will use Lit Element for reactivity with Typescript (a lightweight framework using web components).
+        We will use Bun to do everything. This document will contain
+        PageFind, where you'd be able to click a metric and find where it was located on the document. This document is then sent to the 
+        frontend and hosted in an iFrame"
         .to_string());
 
         let tabs = vec![frontend.clone(), backend.clone(), document.clone()];
@@ -185,25 +197,32 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
             </div>
 
             <p style={tabP}>{move || selected_tab.get().read_content()}</p>
+     
             <div class="center" style={center}>
-            <div class="white-golang"></div>
-            <div class="white-rust"></div>
-                <img
-                src="../../public/images/tech-stack.png"
-                blur=true
+            <img
+            src={move || selected_tab.get().get_img()}
+            width=800
+            height=500
+            class="img move-down"
+            />
+            // <div class="white-golang"></div>
+            // <div class="white-rust"></div>
+            //     <img
+            //     src="../../public/images/tech-stack.png"
+            //     blur=true
 
-                width=1100
-                height=700
-                quality=85
-                class="img"
-                />
-                <img
-                src="../../public/images/bun.png"
-                width=100
-                height=100
-                quality=85
-                class="bun"
-                />
+            //     width=1100
+            //     height=700
+            //     quality=85
+            //     class="img"
+            //     />
+            //     <img
+            //     src="../../public/images/bun.png"
+            //     width=100
+            //     height=100
+            //     quality=85
+            //     class="bun"
+            //     />
 
             </div>
         </div>

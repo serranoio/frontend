@@ -19,6 +19,11 @@ leptos_router = { version = "0.4", features = ["nightly"] }
 wasm-bindgen = "=0.2.87"
 gloo-timers = { version = "0.2", features = ["futures"] }
 leptos_image = "0.1.5"
+reqwest = { version = "0.11", features = ["json"] } # reqwest with JSON parsing support
+futures = "0.3" # for our async / await blocks
+web-sys = { version = "0.3.64", features = ["File", "FileList", "HtmlInputElement", "Window"]}
+wasm-bindgen-futures = "0.4.37"
+js-sys = "0.3.64"
 
 [features]
 csr = ["leptos/csr", "leptos_meta/csr", "leptos_router/csr"]

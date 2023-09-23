@@ -73,7 +73,12 @@ pub fn SectionAbout(cx: Scope) -> impl IntoView {
 
 
     let racjBody = String::from("
-            Accounting consultant
+    I'm Patrick, an aspiring accounting student at UIC with a curious mind.
+     I have a deep passion for exploring intriguing subjects and uncovering
+      new knowledge. Whether it's numbers or fascinating facts, I'm always
+       eager to dive in and learn. I look forward to applying my analytical
+        skills and dedication to my studies while continuing to explore
+         the world of accounting.
     ");
 
   view! {

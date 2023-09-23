@@ -55,7 +55,7 @@ let demo = "
             </a>
         <div style={flex}>
         <h1 style={heroTitleStyles} class="hero-title">
-        "Convert your Financials to an Accounting Statement in"
+        "Distill your Financials into an Accounting Statement in"
          <strong
         style={strong}
         class="seconds"
