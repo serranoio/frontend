@@ -34,7 +34,7 @@ pub fn HeadNav(cx: Scope) -> impl IntoView {
     padding: 2.4rem 2.4rem;
     font-size: 2.4rem;
     z-index: 10;
-    color: var(--primary-1);
+    color: var(--secondary-1-shade-1);
     position: relative;
     ".to_string() + flex.clone();
     
@@ -45,7 +45,7 @@ pub fn HeadNav(cx: Scope) -> impl IntoView {
     
     
     let buttonStyles: &str = "
-    color: var(--primary-1);
+    color: var(--secondary-1-shade-1);
     border: none;
     background-color: transparent;
     font-size: 2.4rem;

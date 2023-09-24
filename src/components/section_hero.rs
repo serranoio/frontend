@@ -17,13 +17,15 @@ pub fn SectionHero(cx: Scope) -> impl IntoView {
     ";
     
     let heroTitleStyles = "
-        color: var(--primary-1);
+        color: var(--secondary-1);
         font-size: 9.2rem;
         z-index: 10;
     ";
 
 let flex = "
-    padding: 9.8rem 0 0 0;
+    padding: 12rem 0 0 0;
+    // display: flex;
+    // align-items: center;
     z-index: 1;
 ";
 
@@ -41,7 +43,7 @@ let demo = "
     font-size: 4.6rem;
     transform: translateX(-50%);
     bottom: 10%;
-    color: var(--primary-1);
+    color: var(--secondary-1);
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
@@ -55,7 +57,7 @@ let demo = "
             </a>
         <div style={flex}>
         <h1 style={heroTitleStyles} class="hero-title">
-        "Distill your Financials into an Accounting Statement in"
+        "Distill your Financials into The Highlights in"
          <strong
         style={strong}
         class="seconds"

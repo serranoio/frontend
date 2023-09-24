@@ -22,7 +22,7 @@
         }
         body {
             background-color: var(--secondary-3);
-    /* background: linear-gradient(to top,var(--primary-3), var(--secondary-3)); */
+    background: var(--secondary-3);
       position: relative;
       overflow-x: hidden;
 }
@@ -56,8 +56,13 @@ h1,h2,h3,h4,h5,h6 {
             --primary-3:  #CE3500;
             --primary-4:  #A72B00;
 
+            /* This will be our main */
             --secondary-0:  #F97E10;	/* Main Secondary color (1) */
             --secondary-1:  #FFE2C9;
+            --secondary-1-shade-1:  #EED1B8;
+            --secondary-1-shade-2:  #DDC0A7;
+            --secondary-1-shade-3:  #BB9F85;
+            --secondary-1-shade-4:  #997D63;
             --secondary-2:  #F3A45E;
             --secondary-3:  #CE6100;
             --secondary-4:  #A74E00;
@@ -93,12 +98,10 @@ h1,h2,h3,h4,h5,h6 {
         }
 
         .hero {
-            color: var(--primary-1) !important;
             transition: all .2s;
             /* box-shadow: 0 0 0 1px var(--primary-1);    */
             background: #CE6100;
-          
-            background: linear-gradient(145deg, #F57300, #A74F00);
+
             border-radius: 100%;
             box-shadow: 12.31px 12.31px 62px #803C00, -12.31px -12.31px 62px #FF8600;
             
@@ -173,7 +176,7 @@ h1,h2,h3,h4,h5,h6 {
         
         .hero:hover {
             /* border: none !important; */
-            box-shadow: 0 0 0 var(--primary-1);   
+            /* box-shadow: 0 0 0 var(--primary-1);    */
         }
 
         .hero-title {
@@ -230,47 +233,6 @@ h1,h2,h3,h4,h5,h6 {
     height: 100px;
     position: relative;
 }
-
-
-
-        
-.send-form {
-    /* position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%, 0%); */
-    background-color: transparent;
-    border: none;
-    color: var(--primary-1);
-    font-size: 3.6rem;
-    cursor: pointer;
-    transition: all .2s;
-    display: none;
-} 
-.send-form:hover {
-    transform: translate(-25%, 0%);
-
-}
-
-.send-form {
-  --bg-size: 400%;
-  --color-one: #F3845E;
-  --color-two: #CE3500; 
-  font-size: clamp(3rem, 25vmin, 8rem);
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: move-bg 8s infinite linear;
-}
-
-
-
 
 .show {
     display: block;

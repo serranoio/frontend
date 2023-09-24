@@ -1,5 +1,106 @@
 .flex-center {
     display: flex;
-     align-items: center;
-      flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-1-shade-4);
+    height: 60rem;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+
+    .section-parse {
+    padding: 9.8rem 0;
+    }
+
+    .container {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .file-label {
+        font-size: 3rem;
+        color: var(--secondary-1);
+        background-color: rgba(88,88,88,0);
+        padding: 2.4rem 1.2rem;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .file-label:hover {
+        background-color: rgba(88,88,88,.25);
+        
+    }
+
+    .place-holder {
+        display: none;
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: var(--secondary-1);
+    }
+    .text {
+        
+        font-size: 2.4rem;
+    }
+        
+
+.send-form {
+    /* filter: blur(1px); */
+    border: none;
+    color: var(--primary-1);
+    font-size: 3.6rem;
+} 
+
+.send-form::after {
+    content: ">>";
+    position: absolute;
+    right: 27%;
+    opacity: 0;
+    transition: all .2s;
+}
+
+.cover:hover .send-form::after {
+    right: 24%;
+    opacity: 1;
+}
+
+.cover {
+    background-color: rgba(0,0,0,.75);
+    cursor: pointer;
+    transition: all .2s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border: none;
+
+}
+
+
+
+.send-form::after,
+.send-form {
+  --bg-size: 400%;
+  --color-one: #F3845E;
+  --color-two: #CE3500; 
+  font-size: clamp(3rem, 25vmin, 8rem);
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 8s infinite linear;
+}
+

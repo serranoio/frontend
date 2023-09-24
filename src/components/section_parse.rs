@@ -66,19 +66,12 @@ async fn load_data(target: Option<FileList>) {
    
   ";
 
-  let fileLabel="
-    font-size: 2.4rem;
-    color: var(--primary-1);
-    background-color: rgba(0,0,0,.25);
-    padding: 2.4rem 1.2rem;
-    cursor: pointer;
-  ";
 
   let readied = "
     font-size: 2.4rem;
     background-color: rgba(0,0,0, .25);
     padding: 2.4rem;
-    color: var(--primary-1);
+    color: var(--secondary-1);
   ";
 
   let title = "
@@ -86,6 +79,7 @@ async fn load_data(target: Option<FileList>) {
   // transform: translateY(-30rem);
   color: var(--secondary-1);
   text-align: center;
+  margin-bottom: 9.2rem;
   ";
 
   let (processing_status, set_processing_status) = create_signal(cx, "");
@@ -128,7 +122,7 @@ async fn load_data(target: Option<FileList>) {
   position: absolute;
   bottom: 0%;
   left: 50%;
-  color: var(--primary-1);
+  color: var(--secondary-1);
   transform: translate(-50%, 105%);
   font-size: 2.4rem;
   ";
@@ -164,20 +158,13 @@ async fn load_data(target: Option<FileList>) {
 
   view! {
     cx,
-    <section style="
-    background: linear-gradient(to top ,var(--black), var(--secondary-3));
-    // background: var(--black);
-    "
+    <section 
+    class="section-parse"
     id="demo"
     >
-    <div style="
-    max-width: 120rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0 auto;
-    ">
+    <div
+    class="container"
+    >
     <div>
     <h1 style={title}>"And the Fiesta Begins."</h1>
     <h2 style="color: var(--primary-1); font-size: 6.4rem; text-align: center;">"DEMO SECTION IN WIP"</h2>
@@ -185,7 +172,8 @@ async fn load_data(target: Option<FileList>) {
 
     
     <form 
-    on:submit=on_submit class="flex-center"
+    on:submit=on_submit 
+    class="flex-center"
     action="http://127.0.0.1:8080/api/document"
     method="POST"
     enctype="multipart/form-data"
@@ -193,7 +181,11 @@ async fn load_data(target: Option<FileList>) {
     
     // <div style="position: relative; display: flex; align-items: center;">
     // <div>
-    <label style={fileLabel} for="upload">"Upload file here"</label>
+    <label
+    class="file-label"
+    for="upload">
+    "Upload file here"
+   </label>
     <input type="file"
     style={inputStyles}
     id="upload"
@@ -222,13 +214,25 @@ async fn load_data(target: Option<FileList>) {
 
     //                 </div>
 
-                    <button type="submit"
-                    style={submitStyles}
-                    class:show=move || file_added() && !file_send()
-                    class="send-form"
-                    >
-                    ">>"
-                    </button>
+    <div
+    class="place-holder"
+    class:show=move || file_added() && file_send()
+    >
+    <p class="text">
+    "iFrame goes here on send"
+    </p>
+    </div>
+                <button class="cover"
+                class:show=move || file_added() && !file_send()
+                type="submit"
+                >
+                  <p 
+                  style={submitStyles}
+                  class="send-form"
+                  >
+                  "Process"
+                  </p>
+                </button>
     //                 <p style={parseStatusStyles}>{display}</p>
     //               </div>
 

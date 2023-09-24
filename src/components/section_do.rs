@@ -41,17 +41,18 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
 
     let textBox = "
         font-size: 4.4rem;
-        color: var(--secondary-1);
+        color: var(--secondary-1-shade-1);
 
         width: 100%;
         height: 100%;
-        padding: 6.4rem 0;
+        padding: 6.4rem 2.4rem;
         display: flex;
         align-items: center;
+        box-shadow: 12.31px 12.31px 62px #803C00, -12.31px -12.31px 62px #FF8600;
+        border-radius: 10px;
         ";
 
         let visualBox = "
-        border-left: 2px dashed var(--secondary-3);
         // background-color: ;
         // box-shadow: 0 0 2px 3px rgba(206, 53, 0, 0.3);
         // border-radius: 10px;
@@ -60,10 +61,12 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
         padding: 0 0 0 3.2rem;
         display: flex;
         justify-content: center;
+        box-shadow: 12.31px 12.31px 62px #803C00, -12.31px -12.31px 62px #FF8600;
+        border-radius: 10px;
     ";
 
     let highlight = "
-    background-image: linear-gradient(to right, #CE6100 0%, #CE3500 100%);
+    background-image: linear-gradient(to right, #000 0%, #CE3500 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     ";
@@ -81,7 +84,7 @@ pub fn SectionDo(cx: Scope) -> impl IntoView {
     >
 
     <div style={textBox}>
-        <p>"Distill your financial Statement ino the" <span style={highlight}>" highlights "</span>"for your stakeholders"</p>
+        <p>"Distill your financial statement ino the" <span style={highlight}>" highlights "</span>"for your stakeholders"</p>
     </div>
 
     <div class="visual-box" style={visualBox}>
