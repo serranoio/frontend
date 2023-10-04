@@ -82,9 +82,10 @@ pub fn SectionTech(cx: Scope) -> impl IntoView {
        let document = TechStack::Document(
         "In the final step, we will generate an html-report from the gathered data. To do so,
         we will use Lit Element for reactivity with Typescript (a lightweight framework using web components).
-        We will use Bun to do everything. This document will contain
-        PageFind, where you'd be able to click a metric and find where it was located on the document. This document is then sent to the 
-        frontend and hosted in an iFrame"
+        We will use Bun to do everything. This document allows you to create metrics manually, or from the 10-k file. You will
+        be able to hover over it and select the metric directly from the document.
+         This document is then sent to the 
+        frontend and hosted in an iFrame."
         .to_string());
 
         let tabs = vec![frontend.clone(), backend.clone(), document.clone()];

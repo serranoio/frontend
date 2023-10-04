@@ -24,6 +24,8 @@ futures = "0.3" # for our async / await blocks
 web-sys = { version = "0.3.64", features = ["File", "FileList", "HtmlInputElement", "Window"]}
 wasm-bindgen-futures = "0.4.37"
 js-sys = "0.3.64"
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.0"
 
 [features]
 csr = ["leptos/csr", "leptos_meta/csr", "leptos_router/csr"]

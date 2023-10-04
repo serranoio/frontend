@@ -20,36 +20,37 @@ use reqwest::{RequestBuilder, Body};
 
 use web_sys::Window;
 use js_sys::Uint8Array;
+
+use serde::{Deserialize};
+
+#[derive(Deserialize, Debug)]
+pub struct Doc {
+    pub id: u32,
+}
+
 // leptos::log!("where do I run?");
 
 // what we need to do next is to create an interval that ends after 100 seconds.
 // create the timer by creating a for loop and and incrementing counter + sleep(1000)
 // the position of the div is based on the percentage of completion
 // 
-async fn load_data(target: Option<FileList>) {
-
+async fn load_data(target: Option<FileList>) -> u32 {
   let target = target.expect("file list").get(0).expect("file");
-
-  // log!("{:?}", target);
-
   let text_file = wasm_bindgen_futures::JsFuture::from(target.text()).await;
-
+  
   let arr = text_file.unwrap().as_string().unwrap();
-
-        
+    
         let res =  reqwest::Client::new()
-        .post("http://127.0.0.1:8080/api/document")
+        .post("http://127.0.0.1:8080/api/post/document")
         .body(
           arr
         )
         .send()
         .await;
-      
-      
-      
-      
-      
-    }
+
+      let val = res.unwrap().json::<Doc>().await;
+      val.unwrap().id
+  }
     
     
     #[component]
@@ -61,11 +62,6 @@ async fn load_data(target: Option<FileList>) {
   z-index: -1;
   position: absolute;
   ";
-
-  let submitStyles="
-   
-  ";
-
 
   let readied = "
     font-size: 2.4rem;
@@ -82,7 +78,6 @@ async fn load_data(target: Option<FileList>) {
   margin-bottom: 9.2rem;
   ";
 
-  let (processing_status, set_processing_status) = create_signal(cx, "");
   let (file_added, set_file_added) = create_signal(cx, false);
   let (file_send, send_file) = create_signal(cx, false);
 
@@ -91,14 +86,21 @@ async fn load_data(target: Option<FileList>) {
   let (files, set_files) = create_signal(cx, None);
   
 
-
-  let once = 
+  let file_post: Resource<Option<FileList>, u32> = 
   create_resource(cx,
    files,
    |file_list| 
   async move { 
     load_data(file_list).await });
-  
+
+
+    // let documentID = create_resource(
+    //   cx, 
+    //   once.read(cx)
+    //   , async move {
+
+    //     once.read(cx)
+    //   });
   
   let on_submit = move |ev: SubmitEvent| {
     ev.prevent_default();
@@ -118,43 +120,19 @@ async fn load_data(target: Option<FileList>) {
     set_file_added(true);
   };
 
-  let parseStatusStyles = "
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  color: var(--secondary-1);
-  transform: translate(-50%, 105%);
-  font-size: 2.4rem;
-  ";
 
-  let (count, increment_count) = create_signal(cx, 0);
-
-  let (turn_off, set_turn_off) = create_signal(cx, true);
-
-  let display = move || randomWords[count.get() / 14];
+  let id = move || 
+    file_post
+    .read(cx)
+    .map(|value| format!("http://127.0.0.1:8080/api/get/document/${value}"))
+    .unwrap_or_else(|| format!("http://127.0.0.1:8080/api/get/document/0"));
 
 
-  // let mut timerHandle = RefCell::new(Err(JsValue::null()));
-  let mut timerHandle = leptos::set_interval_with_handle(move || {
-     increment_count(count.get()+1);
-   }, Duration::from_millis(100));
+  let make_full_screen = move |_| {
 
-  create_effect(cx, move |_| {
-    if file_send() && turn_off() {
-      set_processing_status("Uploading");
-
-      set_turn_off(false);
-    }
-    
-    // log!("{:?}", timerHandle);
-    if count() == 100 {    
-      match &timerHandle {
-        Ok(handle) => handle.clear(),
-        Err(val) => log!("wtf {val:?}"),
-      }
-    }
-
-  });
+    log!("hello");
+  };
+  // let id_value = move || id();
 
   view! {
     cx,
@@ -170,7 +148,8 @@ async fn load_data(target: Option<FileList>) {
     <h2 style="color: var(--primary-1); font-size: 6.4rem; text-align: center;">"DEMO SECTION IN WIP"</h2>
     </div>
 
-    
+
+
     <form 
     on:submit=on_submit 
     class="flex-center"
@@ -179,6 +158,8 @@ async fn load_data(target: Option<FileList>) {
     enctype="multipart/form-data"
     >
     
+    
+    <button type="button" class="full-screen" on:click=make_full_screen>"x"</button>
     // <div style="position: relative; display: flex; align-items: center;">
     // <div>
     <label
@@ -213,21 +194,18 @@ async fn load_data(target: Option<FileList>) {
     //                 >
 
     //                 </div>
-
-    <div
+    <iframe src=id
     class="place-holder"
     class:show=move || file_added() && file_send()
+    style="height: 100vh; width: 100%; border: none;"
     >
-    <p class="text">
-    "iFrame goes here on send"
-    </p>
-    </div>
+
+    </iframe>
                 <button class="cover"
                 class:show=move || file_added() && !file_send()
                 type="submit"
                 >
                   <p 
-                  style={submitStyles}
                   class="send-form"
                   >
                   "Process"
@@ -238,7 +216,10 @@ async fn load_data(target: Option<FileList>) {
 
     //               <p style={readied}>"end"</p>
     //         </div>
-          </form>
+    </form>
+    // <p>hey</p>
+
+
     </div>
         </section>
     }

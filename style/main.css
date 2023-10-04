@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: NeueMachina !important;
 	text-align: center;
 	background-color: black;
 }
@@ -7,4 +7,11 @@ body {
 .hello {
 	font-size: 2.4rem;
 }
+
+
+:root {
+	font-family: NeueMachina;
+}
+
+
 
