@@ -1795,6 +1795,8 @@ dependencies = [
  "leptos_meta",
  "leptos_router",
  "reqwest",
+ "serde",
+ "serde_json",
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",

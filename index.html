@@ -25,14 +25,21 @@
     background: var(--secondary-3);
       position: relative;
       overflow-x: hidden;
+      font-family: NeueMachina;
 }
 
 .head {
     overflow: hidden;
 }
 h1,h2,h3,h4,h5,h6 {
-    font-family:  Helvetica, sans-serif;
     font-weight: 400;
+}
+
+@font-face {
+  font-family: NeueMachina;
+  src: url('/public/assets/fonts/NeueMachina-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
 }
         * {
             box-sizing: border-box;
@@ -124,8 +131,8 @@ h1,h2,h3,h4,h5,h6 {
 
         svg {
             position: absolute;
-            right: -35%;
-            top: -7%;
+            right: -33%;
+            top: -6.5%;
             /* transform: translate(25%, 5%); */
             width: 1750px;
             height: 1750px;
@@ -162,14 +169,16 @@ h1,h2,h3,h4,h5,h6 {
             /* fill:hsl(from color h s l); */
             /* fill: linear-gradient(var(--primary-0), var(--primary-1)); */
         }
-
-
-@keyframes svg {
-    from {
-        stroke-opacity: .5;
-    }
-    to {
-        stroke-opacity: .25;
+        
+        
+        @keyframes svg {
+            from {
+                stroke-opacity: .5;
+                stroke-dasharray: .05 3;
+            }
+            to {
+                stroke-opacity: .25;
+                stroke-dasharray: .25 3;
     }
 }
 
