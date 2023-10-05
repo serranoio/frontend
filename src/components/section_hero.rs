@@ -33,6 +33,8 @@ let flex = "
 let strong = "
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: NeueMachina;
+    font-weight: 400;
 ";
 
 let demo = "
@@ -56,7 +58,7 @@ let demo = "
             </a>
         <div style={flex}>
         <h1 style={heroTitleStyles} class="hero-title">
-        "Analyze The Fundamentals Of Any Public Company In"
+        "Analyze The Fundamentals Of Any Company In"
          <strong
         style={strong}
         class="seconds"

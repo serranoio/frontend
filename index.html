@@ -174,11 +174,16 @@ h1,h2,h3,h4,h5,h6 {
         @keyframes svg {
             from {
                 stroke-opacity: .5;
+                stroke-dasharray: .2 7;
                 stroke-dasharray: .05 3;
+                transform: translateY(.5%);
             }
             to {
                 stroke-opacity: .25;
+                stroke-dasharray: 4 4;
                 stroke-dasharray: .25 3;
+                transform: translateY(0%);
+                /* stroke-dasharray: 6 6; */
     }
 }
 
@@ -195,7 +200,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
         .seconds {
-            text-shadow: 0 0 4px rgba(0,0,0,.5);
+            text-shadow: 0 0 2px rgba(0,0,0,.5);
             transition: all .2s;
         }
         

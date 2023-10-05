@@ -120,3 +120,55 @@
   animation: move-bg 8s infinite linear;
 }
 
+.title-div {
+        text-align: center;
+        margin-bottom: 6rem;
+}
+
+.title-div h1 {
+    font-size: 7.2rem;
+}
+
+.title-div h2 {
+    font-size: 6rem;
+}
+
+.option-names {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 3.2rem;
+    margin-bottom: 4.2rem;
+}
+
+.step-container {
+}
+
+
+.all-files {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    font-size: 1.6rem;
+    row-gap: 1.2rem;
+}
+.file-div {
+    border-radius: 2px;
+    border: 2px solid var(--secondary-2);
+    width: 8rem;
+    height: 10rem;
+    /* height: 100%; */
+    padding: 1.2rem;
+    
+}
+
+.split {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
