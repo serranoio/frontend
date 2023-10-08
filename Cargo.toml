@@ -21,7 +21,7 @@ gloo-timers = { version = "0.2", features = ["futures"] }
 leptos_image = "0.1.5"
 reqwest = { version = "0.11", features = ["json"] } # reqwest with JSON parsing support
 futures = "0.3" # for our async / await blocks
-web-sys = { version = "0.3.64", features = ["File", "FileList", "HtmlInputElement", "Window"]}
+web-sys = { version = "0.3.64", features = ["File", "FileList", "HtmlInputElement", "Window", "HtmlElement"]}
 wasm-bindgen-futures = "0.4.37"
 js-sys = "0.3.64"
 serde = { version = "1.0.188", features = ["derive"] }

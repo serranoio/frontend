@@ -11,6 +11,13 @@
     <link  data-trunk rel='css' href="/src/components/section_tech.css">
     <link  data-trunk rel='css' href="/src/components/section_about.css">
     <link  data-trunk rel='css' href="/src/components/section_parse.css">
+
+    
+    <link data-trunk rel="rust" data-wasm-opt="z"/>
+
+    <link data-trunk rel="icon" type="image/ico" href="./public/favicon.ico" />
+    <!-- <link  data-trunk rel="apple-touch-icon" type="image/ico" href="./public/favicon_io/apple-touch-icon.png" /> -->
+    <!-- <link  rel="manifest" href="./public/favicon_io/site.webmanifest" /> -->
 </head>
 <body>
     <style>
@@ -47,6 +54,8 @@ h1,h2,h3,h4,h5,h6 {
             margin: 0;
         }
 
+        
+
 
         :root {
             --primary: #F94C10;
@@ -74,9 +83,24 @@ h1,h2,h3,h4,h5,h6 {
             --secondary-3:  #CE6100;
             --secondary-4:  #A74E00;
 
+            --gray90: #fef2e7;
+            --gray80: #fee5cf;
+            --gray70: #fdd8b7;
+            --gray60: #fdcb9f;
+            --gray50: #fcbf88;
+            --gray40: #fbb270;
+            --gray10: #fa8b28;
 
             --black: #000;
 
+
+
+  
+
+  --success: #53a051;
+  --info: #006d9c;
+
+  --infoColorD10: #00577c;
 
         }
 
@@ -132,7 +156,7 @@ h1,h2,h3,h4,h5,h6 {
         svg {
             position: absolute;
             right: -33%;
-            top: -6.5%;
+            top: -6%;
             /* transform: translate(25%, 5%); */
             width: 1750px;
             height: 1750px;
@@ -165,26 +189,37 @@ h1,h2,h3,h4,h5,h6 {
             stroke-opacity: .25;
             stroke-dasharray: .25 3;
             stroke-linecap: round;
-            animation: svg  2s infinite alternate;
+            animation: svg  2s infinite alternate, step 2s ease-in-out infinite alternate;
             /* fill:hsl(from color h s l); */
             /* fill: linear-gradient(var(--primary-0), var(--primary-1)); */
         }
         
         
-        @keyframes svg {
+        @keyframes step {
             from {
-                stroke-opacity: .5;
-                stroke-dasharray: .2 7;
-                stroke-dasharray: .05 3;
-                transform: translateY(.5%);
+                stroke-opacity: .7;
             }
             to {
-                stroke-opacity: .25;
+                stroke-opacity: .2;
+            }
+        }
+
+        @keyframes svg {
+            from {
+                /* stroke-opacity: .4; */
+                stroke-dasharray: .2 7;
+                stroke-dasharray: .01 3;
+                transform: translateY(0%);
+                stroke-width: 1;
+            }
+            to {
+                stroke-width: 2;
+                /* stroke-opacity: .2; */
                 stroke-dasharray: 4 4;
                 stroke-dasharray: .25 3;
                 transform: translateY(0%);
-                /* stroke-dasharray: 6 6; */
-    }
+                /* stroke-dasharray: 6 6; */ 
+            }
 }
 
         
