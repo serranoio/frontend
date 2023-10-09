@@ -63,9 +63,6 @@ pub struct FileAndMetric {
     pub metric: String,
 }
 
-
-
-
 async fn load_metric_tags() -> NameIDsDeserialized {
     let res = reqwest::Client::new()
         .get("http://127.0.0.1:8080/api/get/metrics/all")
