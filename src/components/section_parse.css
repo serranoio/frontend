@@ -6,12 +6,18 @@
     height: 100rem;
     position: relative;
     /* overflow: hidden; */
+    transition: all 1s;
+    border: 2px solid var(--gray10);
     
 }
 
 .make-full-screen {
     width: 130%;
     left: -15%;
+}
+
+.remove {
+    display: none;
 }
 
 .full-screen {
@@ -22,20 +28,32 @@
     cursor: pointer;
     right: 0%;
     z-index: 99;
-    background-color: var(--secondary-0);
+    background-color: var(--gray10);
+    border: 2px solid var(--gray70);
+    color: var(--gray70);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     transform: translate(0%);
     transition: all .2s;
 }
+.full-screen::after {
+    content: ">";
+    display: block;
+    transition: all .2s;
+}
+
+.make-full-screen .full-screen::after {
+    transform: rotate(180deg);
+}
+
 
 .full-screen:hover {
     transform: translate(5%);
 }
 
 .make-full-screen
-.full-screen { 
-    transform: translate(0%);
+.full-screen:hover { 
+    transform: translate(-5%);
 }
 
     .section-parse {

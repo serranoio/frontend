@@ -244,7 +244,7 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
 
     
     /* USABILITY  */
-    let (is_full_screen, set_is_full_screen) = create_signal(cx, false);
+    let (is_full_screen, set_is_full_screen) = create_signal(cx, true);
     
     let make_full_screen = move |_| {
         set_is_full_screen(!is_full_screen())
@@ -297,6 +297,8 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
     let (choose_document, set_choose_document) = create_signal(cx, ChooseDocument::ID("".into()));
     /* Step 3 */
 
+    let (submitted, set_submitted) = create_signal(cx, false);
+
     let on_submit = move |ev: SubmitEvent| {
         ev.prevent_default();
 
@@ -308,6 +310,8 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
 
         set_files(None);
         set_id("".into());
+
+        set_submitted(true);
     };
 
     // if we submit event... so this is step 3
@@ -457,7 +461,8 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
             >
             <button type="button"
             class="full-screen"
-            on:click=make_full_screen>">"
+            class:remove=move || !submitted()
+            on:click=make_full_screen>
             </button>
             <iframe src=id
             class="place-holder"
