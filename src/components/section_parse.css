@@ -113,13 +113,13 @@
 .send-form::after {
     content: ">>";
     position: absolute;
-    right: 27%;
+    right: 25%;
     opacity: 0;
     transition: all .2s;
 }
 
 .cover:hover .send-form::after {
-    right: 24%;
+    right: 22%;
     opacity: 1;
 }
 

@@ -450,7 +450,7 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
       <div class="step-container">
       <Step step_number={3}
             step_title={"Process Document".into()}
-            step_subtitle="oogly boogly dont get too excitedly...".into()
+            step_subtitle="oohh oohh oh oh that's international love".into()
       />
           // STEP 3
 
@@ -479,7 +479,7 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
               <p
               class="send-form"
               >
-              "Let's Party"
+              "Let's Freaking Party"
               </p>
             </button>
             </form>
