@@ -56,16 +56,9 @@ impl NameIDsDeserialized {
     }
 }
 
-
-#[derive(Deserialize, Debug, Serialize, Clone)]
-pub struct FileAndMetric {
-    pub file: String,
-    pub metric: String,
-}
-
 async fn load_metric_tags() -> NameIDsDeserialized {
     let res = reqwest::Client::new()
-        .get("http://127.0.0.1:8080/api/get/metrics/all")
+        .get("https://accential.fly.dev/api/get/metrics/all")
         .send()
         .await;
 
@@ -79,7 +72,7 @@ async fn load_metric_tags() -> NameIDsDeserialized {
 
 async fn load_ids() -> NameIDsDeserialized {
     let res = reqwest::Client::new()
-        .get("http://127.0.0.1:8080/api/get/document/all")
+        .get("https://accential.fly.dev/api/get/document/all")
         .send()
         .await;
 
@@ -89,10 +82,14 @@ async fn load_ids() -> NameIDsDeserialized {
 }
 // leptos::log!("where do I run?");
 
-// what we need to do next is to create an interval that ends after 100 seconds.
-// create the timer by creating a for loop and and incrementing counter + sleep(1000)
-// the position of the div is based on the percentage of completion
-//
+#[derive(Deserialize, Debug, Serialize, Clone)]
+pub struct FileAndMetric {
+    pub file: String,
+    pub metric: String,
+}
+
+//https://accential.fly.dev
+// http://127.0.0.1:8080
 async fn load_data(target: ChooseDocument, tag_id: &ReadSignal<String>) -> u32 {
     match target {
         ChooseDocument::File(handle) => {
@@ -107,7 +104,7 @@ async fn load_data(target: ChooseDocument, tag_id: &ReadSignal<String>) -> u32 {
             let json_bytes = serde_json::to_vec(&file_and_metric).unwrap();
 
             let res = reqwest::Client::new()
-                .post("http://127.0.0.1:8080/api/post/document")
+                .post("https://accential.fly.dev/api/post/document")
                 .body(json_bytes)
                 .send()
                 .await;
@@ -125,7 +122,7 @@ async fn load_data(target: ChooseDocument, tag_id: &ReadSignal<String>) -> u32 {
             let json_bytes = serde_json::to_vec(&file_and_metric).unwrap();
 
             let res = reqwest::Client::new()
-            .post("http://127.0.0.1:8080/api/post/document/add-metrics")
+            .post("https://accential.fly.dev/api/post/document/add-metrics")
             .body(json_bytes)
             .send()
             .await;
@@ -332,8 +329,8 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
     let id = move || {
         file_post
             .read(cx)
-            .map(|value| format!("http://127.0.0.1:8080/api/get/document/${value}"))
-            .unwrap_or_else(|| format!("http://127.0.0.1:8080/api/get/document/0"))
+            .map(|value| format!("https://accential.fly.dev/api/get/document/${value}"))
+            .unwrap_or_else(|| format!("https://accential.fly.dev/api/get/document/0"))
     };
 
     view! {
