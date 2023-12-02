@@ -8,6 +8,8 @@
     /* overflow: hidden; */
     transition: all 1s;
     border: 2px solid var(--gray10);
+    width: 130%;
+    left: -15%;
     
 }
 

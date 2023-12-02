@@ -88,7 +88,7 @@ pub struct FileAndMetric {
     pub metric: String,
 }
 
-//https://accential.fly.dev
+// https://accential.fly.dev
 // http://127.0.0.1:8080
 async fn load_data(target: ChooseDocument, tag_id: &ReadSignal<String>) -> u32 {
     match target {
@@ -241,11 +241,11 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
 
     
     /* USABILITY  */
-    let (is_full_screen, set_is_full_screen) = create_signal(cx, true);
+    // let (is_full_screen, set_is_full_screen) = create_signal(cx, true);
     
-    let make_full_screen = move |_| {
-        set_is_full_screen(!is_full_screen())
-    };
+    // let make_full_screen = move |_| {
+    //     set_is_full_screen(!is_full_screen())
+    // };
     /* USABILITY  */
     /* STEPS */
 
@@ -346,7 +346,7 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
         <div class="step-container">
           <Step step_number={1}
                 step_title={"Choose Any Company".into()}
-                step_subtitle="choose their 10k, 8k, 500k, 401k, or whatever you want".into()
+                step_subtitle="choose their 10k, 8k, 500k, 401k, or anything with tables lol".into()
           />
           <div class="option-names">
             <div><h3>"Choose Saved"</h3></div>
@@ -453,14 +453,8 @@ pub fn SectionParse(cx: Scope) -> impl IntoView {
 
             <form
             on:submit=on_submit
-            class="flex-center"
-            class:make-full-screen=move||is_full_screen()
+            class="flex-center" 
             >
-            <button type="button"
-            class="full-screen"
-            class:remove=move || !submitted()
-            on:click=make_full_screen>
-            </button>
             <iframe src=id
             class="place-holder"
             class:show=move || get_id() != "" || files() == None
